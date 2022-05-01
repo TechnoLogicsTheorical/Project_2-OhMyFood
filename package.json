@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood_web",
+  "version": "1.0.0",
+  "description": "Webside for OhMyFood Restaurant Company",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./sass/main.scss:./assets/css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechnoLogicsTheorical/Project_2-OhMyFood.git"
+  },
+  "author": "Anthony.M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechnoLogicsTheorical/Project_2-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/TechnoLogicsTheorical/Project_2-OhMyFood#readme"
+}
