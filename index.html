@@ -8,11 +8,14 @@
         <meta name="author" content="Anthony.M">
         <meta name="description" content="OhMyFood, chaine de restaurant 3 étoiles, avec des menus copieux à la carte">
 
+        <!-- Stylesheets -->
         <!-- Imports Fonts Google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Shrikhand&display=swap" rel="stylesheet">
-        <!-- Stylesheets -->
+        <!-- Import Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>OhMyFood | Accueil</title>
@@ -33,6 +36,24 @@
                 </p>
                 <a href="#restaurant" class="intro__content__btn">Explorer nos restaurants</a>
             </div>
-        </div>
+        </section>
+
+        <main class="content">
+            <section class="working">
+                <h2 class="working__title">Fonctionnement</h2>
+                <div class="working__step " data-step="1">
+                    <i class="working__step__icon fa-solid fa-mobile-screen-button"></i>
+                    <span class="working__step__text">Choissiez un restaurant</span>
+                </div>
+                <div class="working__step" data-step="2">
+                    <i class="working__step__icon fa-solid fa-list-ul"></i>
+                    <span class="working__step__text">Composez votre menu</span>
+                </div>
+                <div class="working__step working__step--pink" data-step="3">
+                    <i class="working__step__icon fa-solid fa-store"></i>
+                    <span class="working__step__text">Dégustez au restaurant</span>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
