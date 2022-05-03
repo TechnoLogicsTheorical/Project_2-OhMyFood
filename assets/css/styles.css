@@ -454,7 +454,7 @@ h1 {
 
 .restaurant {
   background-color: #F6F6F6;
-  padding: 1px 20px;
+  padding: 1px 20px 50px;
 }
 .restaurant__title {
   margin-top: 54px;
@@ -489,6 +489,7 @@ h1 {
   font-weight: 300;
 }
 .restaurant__card__icon {
+  align-self: flex-start;
   display: block;
   font-size: 23px;
   padding-right: 11px;
@@ -506,9 +507,6 @@ h1 {
   font-size: 14px;
   padding: 6px 12px;
   border-radius: 2px;
-}
-.restaurant:last-child {
-  margin-bottom: 65px;
 }
 
 .footer {
