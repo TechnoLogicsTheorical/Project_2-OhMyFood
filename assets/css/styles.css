@@ -352,7 +352,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.footer__heading, .topbar__heading {
+.card__headingContainer .heading, .footer__heading, .topbar__heading {
   font-family: Shrikhand, cursive;
   text-transform: lowercase;
 }
@@ -363,6 +363,16 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.topbar__back {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 23px;
+  color: black;
 }
 .topbar__heading {
   font-size: 30px;
@@ -392,6 +402,103 @@ body {
 }
 .footer__nav__icon {
   padding-right: 10px;
+}
+
+.content__image {
+  width: 100%;
+  height: 252px;
+  object-fit: cover;
+  z-index: -1;
+  position: relative;
+}
+
+.card__container {
+  height: auto;
+  background: #F6F6F6;
+  padding: 1px 13px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+}
+
+.card__headingContainer .heading {
+  font-size: 28px;
+  text-transform: initial;
+  margin: 30px 0;
+  display: inline-block;
+}
+.card__headingContainer .icon {
+  display: inline-block;
+  padding-left: 28px;
+  font-size: 28px;
+}
+
+.menu__starters, .menu__dishes, .menu__desserts {
+  margin-bottom: 46px;
+}
+
+.menu__heading {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 5px 6px;
+}
+.menu__heading::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: 5px;
+  margin-bottom: 14px;
+}
+
+.card__product {
+  border-radius: 15px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex: none;
+  margin-bottom: 14px;
+}
+.card__product__price {
+  padding: 12px 10px;
+  font-weight: bold;
+  margin-left: auto;
+  align-self: flex-end;
+  padding: 0 22px 12px 22px;
+}
+.card__product__pickup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #FFF;
+  width: 60px;
+  height: auto;
+  font-size: 20px;
+  border-radius: 0 14px 14px 0;
+}
+.card__product:hover .card__product__pickup {
+  display: inline-flex;
+}
+
+.card__product__content {
+  padding: 12px 0 12px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__product__content__title {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.card__product__content__text {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.card__btn {
+  margin: 8px auto 76px;
+  text-align: center;
 }
 
 .btn, .btn--cta {

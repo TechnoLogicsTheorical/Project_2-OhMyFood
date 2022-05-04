@@ -1,0 +1,108 @@
+.content {
+
+    &__image {
+        width: 100%;
+        height: 252px;
+        object-fit: cover;
+        z-index: -1;
+        position: relative;
+    }
+}
+
+.card__container {
+    height: auto;
+    background: $color-tertiary2;
+    padding: 1px 13px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+}
+
+.card__headingContainer {
+    & .heading {
+        font-size: 28px;
+        @extend %logo;
+        text-transform: initial;
+        margin: 30px 0;
+        display: inline-block;
+    }
+
+    & .icon {
+        display: inline-block;
+        padding-left: 28px;
+        font-size: 28px;
+    }
+}
+
+
+.menu__starters, .menu__dishes,.menu__desserts {
+    margin-bottom: 46px;
+}
+
+.menu__heading {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 0 5px 6px;
+    &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: $color-tertiary;
+        margin-top: 5px;
+        margin-bottom: 14px;
+    }
+}
+
+.card__product {
+    @include card--shape;
+    display: flex;
+    flex: none;
+
+    margin-bottom: 14px;
+
+    &__price {
+        padding: 12px 10px;
+        font-weight: bold;
+        margin-left: auto;
+        align-self: flex-end;
+        padding: 0 22px 12px 22px;
+    }
+
+    &__pickup {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-tertiary;
+        color: #FFF;
+        width: 60px;
+        height: auto;
+        font-size: 20px;
+        border-radius: 0 14px 14px 0;
+    }
+
+    &:hover &__pickup {
+        display: inline-flex;
+    }
+}
+
+.card__product__content {
+    padding: 12px 0 12px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &__title {
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 15px;
+    }
+}
+
+.card__btn {
+    margin: 8px auto 76px;
+    text-align: center;
+}
