@@ -4,9 +4,8 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
-    &__logo {
-        font-family: 'Shrikhand', cursive;
-        text-transform: lowercase;
+    &__heading {
+        @extend %logo;
         font-size: 30px;
     }
 }

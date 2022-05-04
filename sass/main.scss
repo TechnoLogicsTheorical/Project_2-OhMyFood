@@ -1,5 +1,6 @@
 
 @import './utils/variables';
+@import './utils/mixins';
 
 @import './vendors/normalize';
 
@@ -7,6 +8,9 @@
 @import './base/typo';
 
 @import './layout/header';
+@import './layout/footer';
+
+@import './components/boutons';
 
 @import './pages/index';
 

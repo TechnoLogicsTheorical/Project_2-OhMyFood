@@ -1,0 +1,29 @@
+.footer {
+    background-color: $color-footer;
+    color: white;
+    padding: 25px;
+    &__heading {
+        @extend %logo;
+        font-size: 18px;
+        margin-bottom: 17px;
+    }
+}
+
+.footer__nav {
+    padding-bottom: 8px;
+    
+    &__list {
+        list-style: none;
+        &__item {
+            padding-bottom: 8px;
+        }
+    }
+
+    &__link {
+        color: inherit;
+    }
+    
+    &__icon {
+        padding-right: 10px;
+    }
+}
