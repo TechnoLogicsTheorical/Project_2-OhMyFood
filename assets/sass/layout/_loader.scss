@@ -1,0 +1,62 @@
+@keyframes clign {
+    to {
+        opacity: 0.6;
+    } from {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    80% {
+        visibility: visible;
+        opacity: 1;
+    } 99% {
+        opacity: 0;
+    }
+    100% {
+        visibility: hidden;
+    }
+  }
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+
+    &__logo {
+        @extend %logo;
+        font-size: 64px;
+
+        padding: 0 1em;
+        color: transparent;
+        background: linear-gradient(180deg, #FF79DA -25%, #9356DC 125%);
+        
+        -webkit-background-clip: text;
+        -o-background-clip: text;
+        background-clip: text;
+    }
+
+    &__text {
+        margin-top: 30px; 
+        font-size: 24px;
+        color: #6b6b6b;
+
+        animation-name: clign;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}

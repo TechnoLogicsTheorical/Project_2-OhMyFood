@@ -91,7 +91,7 @@
     &--pink {
         background-color:#F5EDFF;
     }
-
+.restaurant__card__icon
     &__icon.fa-store {
         color: $color-primary;
     }
@@ -137,8 +137,6 @@
 
     &__icon {
         align-self: flex-start;
-        display: block;
-        font-size: 23px;
         padding-right: 11px;
     }
 

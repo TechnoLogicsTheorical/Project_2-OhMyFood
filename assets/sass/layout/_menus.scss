@@ -30,7 +30,11 @@
         display: inline-block;
         padding-left: 28px;
         font-size: 28px;
+        &::after {
+            padding-left: inherit;
+        }
     }
+    
 }
 
 
@@ -58,7 +62,10 @@
     display: flex;
     flex: none;
 
+    overflow: hidden;
     margin-bottom: 14px;
+
+    opacity: 0;
 
     &__price {
         padding: 12px 10px;
@@ -78,10 +85,6 @@
         height: auto;
         font-size: 20px;
         border-radius: 0 14px 14px 0;
-    }
-
-    &:hover &__pickup {
-        display: inline-flex;
     }
 }
 
@@ -105,4 +108,71 @@
 .card__btn {
     margin: 8px auto 76px;
     text-align: center;
+}
+
+// ----------------------------
+// ####Multiples Animations####
+// ----------------------------
+// Animation Card Pickup
+// ----------------------------
+@keyframes slideInUP {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.menu__heading, .card__product {
+    animation: slideInUP 2s ease-in-out forwards;
+}
+
+
+@function incremantVar($var,$amount) {
+    @return ($var * $amount)
+}
+
+$elements: 5;
+$animation-delay: 330;
+
+@for $i from 0 to $elements {
+    .card__product:nth-child(#{$i + 1}) {
+        $animation-delay: incremantVar($animation-delay, $i);
+        animation-delay: $animation-delay + ms;
+  }
+}
+
+// --------------------------
+// Animation Card Pickup
+// --------------------------
+@keyframes showButton {
+    from {
+        transform: translateX(60px);
+        width: 0;
+    } to {
+        transform: translateX(0);
+        width: 60px;
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+.card__product:hover .card__product__pickup {
+    display: inline-flex;
+    animation-name: showButton;
+    animation-duration: 330ms;
+}
+
+.card__product:hover .card__product__pickup span {
+    animation-name: rotateIcon;
+    animation-duration: 660ms;
+    animation-delay: 300ms;
 }

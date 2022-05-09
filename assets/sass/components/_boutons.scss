@@ -15,3 +15,43 @@
         background: linear-gradient(180deg, lighten($color-secondary,5%) -25%, lighten($color-primary,5%) 125%);
     }
 }
+
+.btn__like {
+    display: block;
+    font-size: 23px;
+    position: relative;
+}
+
+// Animation Button Like
+
+.btn__like:hover {
+    color: transparent;
+    transition: color 330ms;
+    &::after {
+        opacity: 1;
+    }
+}
+
+.btn__like::after {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: inherit;
+
+    content: '\f004';
+    color: transparent;
+
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+    background: linear-gradient(180deg, #ff93e1 -25%, #a16be0 125%);
+    -o-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    opacity: 0;
+
+    transition: opacity 330ms;
+}
