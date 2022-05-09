@@ -151,3 +151,38 @@
         border-radius: 2px;
     }
 }
+
+@media screen and (min-width:768px) {
+    .intro__content {
+        max-width: max-content;
+    }
+
+    .working {
+
+        &__container {
+            display: flex;
+            flex: none;
+            flex-wrap: wrap;
+        }
+
+        &__step {
+            display: inline-block;
+            width: 300px;
+            height: 72px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .restaurant__card__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex: none;
+        margin: auto;
+    }
+
+    .restaurant__card {
+        width: 450px;
+        margin: 25px;
+    }
+}

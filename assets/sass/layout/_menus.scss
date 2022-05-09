@@ -176,3 +176,21 @@ $animation-delay: 330;
     animation-duration: 660ms;
     animation-delay: 300ms;
 }
+
+@media screen and (min-width:768px) {
+    .content__image {
+        height: 350px;
+    }
+
+    .container {
+        display: flex;
+        flex: none;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & section {
+            width: 450px;
+            margin: 25px auto;
+        }
+    }
+}

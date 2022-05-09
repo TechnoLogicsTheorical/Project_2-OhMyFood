@@ -567,6 +567,22 @@ body {
   animation-delay: 300ms;
 }
 
+@media screen and (min-width: 768px) {
+  .content__image {
+    height: 350px;
+  }
+
+  .container {
+    display: flex;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container section {
+    width: 450px;
+    margin: 25px auto;
+  }
+}
 @keyframes clign {
   to {
     opacity: 0.6;
@@ -622,6 +638,11 @@ body {
   animation-iteration-count: infinite;
 }
 
+@media screen and (min-width: 768px) {
+  .loader {
+    display: none;
+  }
+}
 .btn, .btn--cta {
   display: inline-block;
   padding: 1rem 1.4rem;
@@ -795,6 +816,37 @@ body {
   font-size: 14px;
   padding: 6px 12px;
   border-radius: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .intro__content {
+    max-width: max-content;
+  }
+
+  .working__container {
+    display: flex;
+    flex: none;
+    flex-wrap: wrap;
+  }
+  .working__step {
+    display: inline-block;
+    width: 300px;
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .restaurant__card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex: none;
+    margin: auto;
+  }
+
+  .restaurant__card {
+    width: 450px;
+    margin: 25px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
