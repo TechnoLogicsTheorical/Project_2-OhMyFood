@@ -76,16 +76,22 @@
     }
 
     &__pickup {
-        display: none;
-        justify-content: center;
-        align-items: center;
+        display: block;
         background-color: $color-tertiary;
         color: #FFF;
-        width: 60px;
-        height: auto;
+        width: 0;
+        height: 100%;
         font-size: 20px;
         border-radius: 0 14px 14px 0;
+        overflow: hidden;
+
+        transform: translate(70px);
+        transition: width 330ms, transform 330ms;
+        & span {
+            padding: 24px 25px;
+        }
     }
+
 }
 
 .card__product__content {
@@ -147,15 +153,7 @@ $animation-delay: 330;
 // --------------------------
 // Animation Card Pickup
 // --------------------------
-@keyframes showButton {
-    from {
-        transform: translateX(60px);
-        width: 0;
-    } to {
-        transform: translateX(0);
-        width: 60px;
-    }
-}
+
 
 @keyframes rotateIcon {
     from {
@@ -165,16 +163,15 @@ $animation-delay: 330;
     }
 }
 
-.card__product:hover .card__product__pickup {
-    display: inline-flex;
-    animation-name: showButton;
-    animation-duration: 330ms;
+.card__product:hover .card__product__pickup  {
+    transform: translate(0);
+    width: 70px;
 }
 
 .card__product:hover .card__product__pickup span {
     animation-name: rotateIcon;
     animation-duration: 660ms;
-    animation-delay: 300ms;
+    animation-delay: 150ms;
 }
 
 @media screen and (min-width:768px) {

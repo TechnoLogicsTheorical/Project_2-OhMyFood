@@ -472,15 +472,19 @@ body {
   padding: 0 22px 12px 22px;
 }
 .card__product__pickup {
-  display: none;
-  justify-content: center;
-  align-items: center;
+  display: block;
   background-color: #99E2D0;
   color: #FFF;
-  width: 60px;
-  height: auto;
+  width: 0;
+  height: 100%;
   font-size: 20px;
   border-radius: 0 14px 14px 0;
+  overflow: hidden;
+  transform: translate(70px);
+  transition: width 330ms, transform 330ms;
+}
+.card__product__pickup span {
+  padding: 24px 25px;
 }
 
 .card__product__content {
@@ -537,16 +541,6 @@ body {
   animation-delay: 1320ms;
 }
 
-@keyframes showButton {
-  from {
-    transform: translateX(60px);
-    width: 0;
-  }
-  to {
-    transform: translateX(0);
-    width: 60px;
-  }
-}
 @keyframes rotateIcon {
   from {
     transform: rotate(0deg);
@@ -556,15 +550,14 @@ body {
   }
 }
 .card__product:hover .card__product__pickup {
-  display: inline-flex;
-  animation-name: showButton;
-  animation-duration: 330ms;
+  transform: translate(0);
+  width: 70px;
 }
 
 .card__product:hover .card__product__pickup span {
   animation-name: rotateIcon;
   animation-duration: 660ms;
-  animation-delay: 300ms;
+  animation-delay: 150ms;
 }
 
 @media screen and (min-width: 768px) {
@@ -838,13 +831,16 @@ body {
 
   .restaurant__card__wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     flex: none;
     margin: auto;
   }
 
   .restaurant__card {
-    width: 450px;
+    width: calc(25% - 50px);
+    min-width: 450px;
     margin: 25px;
   }
 }

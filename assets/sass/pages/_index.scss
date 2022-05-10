@@ -176,13 +176,16 @@
 
     .restaurant__card__wrapper {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
         flex: none;
         margin: auto;
     }
 
     .restaurant__card {
-        width: 450px;
+        width: calc(25% - 50px );
+        min-width: 450px;
         margin: 25px;
     }
 }
